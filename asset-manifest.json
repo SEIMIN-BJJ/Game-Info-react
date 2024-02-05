@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Game-Info-react/static/css/main.5688f869.css",
-    "main.js": "/Game-Info-react/static/js/main.310842db.js",
+    "main.js": "/Game-Info-react/static/js/main.651b49fc.js",
     "static/js/592.5218ff5a.chunk.js": "/Game-Info-react/static/js/592.5218ff5a.chunk.js",
     "static/media/ChosunCentennial_otf.otf": "/Game-Info-react/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
     "static/media/Pretendard-Light.otf": "/Game-Info-react/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
@@ -18,11 +18,11 @@
     "static/media/SB 어그로OTF L.otf": "/Game-Info-react/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
     "index.html": "/Game-Info-react/index.html",
     "main.5688f869.css.map": "/Game-Info-react/static/css/main.5688f869.css.map",
-    "main.310842db.js.map": "/Game-Info-react/static/js/main.310842db.js.map",
+    "main.651b49fc.js.map": "/Game-Info-react/static/js/main.651b49fc.js.map",
     "592.5218ff5a.chunk.js.map": "/Game-Info-react/static/js/592.5218ff5a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5688f869.css",
-    "static/js/main.310842db.js"
+    "static/js/main.651b49fc.js"
   ]
 }
