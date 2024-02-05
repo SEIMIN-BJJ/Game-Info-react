@@ -149,10 +149,11 @@ const GameList = () => {
       try {
         const response = await axios.get('https://api.rawg.io/api/games', {
           params: {
-            key: 'b72a35a54e904b01a822e381af60b766',
+            key: process.env.REACT_APP_RAWG_API_KEY,
             page: page,
           },
         });
+
         const gamesDetails = response.data.results.map((game: RawgGame) => ({
           id: game.id,
           name: game.name,
