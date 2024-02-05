@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Game-Info-react/static/css/main.5688f869.css",
+    "main.js": "/Game-Info-react/static/js/main.4c789cdf.js",
+    "static/js/592.5218ff5a.chunk.js": "/Game-Info-react/static/js/592.5218ff5a.chunk.js",
+    "static/media/ChosunCentennial_otf.otf": "/Game-Info-react/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
+    "static/media/Pretendard-Light.otf": "/Game-Info-react/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
+    "static/media/Pretendard-Medium.otf": "/Game-Info-react/static/media/Pretendard-Medium.902a118c9bf50b588451.otf",
+    "static/media/Pretendard-SemiBold.otf": "/Game-Info-react/static/media/Pretendard-SemiBold.4b3283bc0e29a9c97c11.otf",
+    "static/media/Pretendard-Bold.otf": "/Game-Info-react/static/media/Pretendard-Bold.4e72d46e664b88a6b5c8.otf",
+    "static/media/Pretendard-Regular.otf": "/Game-Info-react/static/media/Pretendard-Regular.57ca7a4b20797e3b9625.otf",
+    "static/media/Pretendard-ExtraBold.otf": "/Game-Info-react/static/media/Pretendard-ExtraBold.fa944c3a241cdef4584a.otf",
+    "static/media/Pretendard-Black.otf": "/Game-Info-react/static/media/Pretendard-Black.ed4fa19a4df95cb6740b.otf",
+    "static/media/Pretendard-ExtraLight.otf": "/Game-Info-react/static/media/Pretendard-ExtraLight.c1677723ce338097648f.otf",
+    "static/media/Pretendard-Thin.otf": "/Game-Info-react/static/media/Pretendard-Thin.e45abc28d4828e92dd10.otf",
+    "static/media/SB 어그로OTF B.otf": "/Game-Info-react/static/media/SB 어그로OTF B.fac7e68fc73cf64ea2fe.otf",
+    "static/media/SB 어그로OTF M.otf": "/Game-Info-react/static/media/SB 어그로OTF M.780ac39bb4c413cd8e16.otf",
+    "static/media/SB 어그로OTF L.otf": "/Game-Info-react/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
+    "index.html": "/Game-Info-react/index.html",
+    "main.5688f869.css.map": "/Game-Info-react/static/css/main.5688f869.css.map",
+    "main.4c789cdf.js.map": "/Game-Info-react/static/js/main.4c789cdf.js.map",
+    "592.5218ff5a.chunk.js.map": "/Game-Info-react/static/js/592.5218ff5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5688f869.css",
+    "static/js/main.4c789cdf.js"
+  ]
+}
