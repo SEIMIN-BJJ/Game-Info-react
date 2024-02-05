@@ -101,6 +101,7 @@ const GameItem = styled.li`
   margin-top: 5rem;
   margin-bottom: -5rem;
 
+
   &:hover {
     background-color: #E60013;
     color: #fff;
@@ -246,9 +247,9 @@ const throttle = (func: (...args: any[]) => void, delay: number) => {
         <h2 style={{ display: 'flex', justifyContent:'center', alignItems:'center',  position:'absolute', marginTop:'-2rem' }}>{selectedPlatformTitle} </h2>
           {filteredGames.map((game) => (
             <GameItem key={game.id}>
-              <strong>{game.name}</strong>
-              <span>{game.platform}</span>
-              <span>{game.genre}</span>
+              <strong className='Game-Title'>{game.name}</strong>
+              <span className='Game-Platform'>{game.platform}</span>
+              <span className='Game-Genre'>{game.genre}</span>
               <GameImage src={game.background_image} alt={game.name} />
             </GameItem>
           ))}
