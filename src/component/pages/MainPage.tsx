@@ -1,5 +1,5 @@
 // src/components/GameList.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Header from 'component/block/Header/header';
@@ -213,17 +213,17 @@ const throttle = (func: (...args: any[]) => void, delay: number) => {
 
     // -------------------------------------------------------
 
-    const updateSelectedPlatformTitle = () => {
+    const updateSelectedPlatformTitle = useCallback(() => {
       if (!selectedPlatform) {
         setSelectedPlatformTitle('All');
       } else {
         setSelectedPlatformTitle(selectedPlatform);
       }
-    };
-
+    }, [selectedPlatform, setSelectedPlatformTitle]);
+    
     useEffect(() => {
       updateSelectedPlatformTitle();
-    }, [selectedPlatform]);
+    }, [selectedPlatform, updateSelectedPlatformTitle]);
 
     return (
       <Container>
