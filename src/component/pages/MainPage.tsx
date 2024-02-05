@@ -110,7 +110,6 @@ const GameItem = styled.li`
 
   .Game-Title {
     padding: 10px;
-    font-size: 1rem;
     text-align: center;
   }
 
@@ -191,12 +190,13 @@ const GameList = () => {
 const throttle = (func: (...args: any[]) => void, delay: number) => {
   let timeout: NodeJS.Timeout | undefined;
   return function (...args: any[]) {
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        func(...args);
-        timeout = undefined;
-      }, delay);
+    if (timeout !== undefined) {
+      clearTimeout(timeout);
     }
+    timeout = setTimeout(() => {
+      func(...args);
+      timeout = undefined;
+    }, delay);
   };
 };
 
@@ -262,7 +262,7 @@ const throttle = (func: (...args: any[]) => void, delay: number) => {
         <h2 style={{ display: 'flex', justifyContent:'center', alignItems:'center',  position:'absolute', marginTop:'-2rem' }}>{selectedPlatformTitle} </h2>
           {filteredGames.map((game) => (
             <GameItem key={game.id}>
-              <strong className='Game-Title'>{game.name}</strong>
+              <h1 className='Game-Title'>{game.name}</h1>
               <span className='Game-Platform'>{game.platform}</span>
               <span className='Game-Genre'>{game.genre}</span>
               <GameImage src={game.background_image} alt={game.name} />
