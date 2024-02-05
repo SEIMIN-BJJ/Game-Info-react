@@ -118,12 +118,12 @@ const GameItem = styled.li`
     font-size: 0.8rem;
     padding: 10px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .Game-Genre {
     font-size: 0.9rem;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     font-weight: 600;
   }
@@ -163,6 +163,8 @@ const GameList = () => {
           genre: game.genres.map((genre) => genre.name).join(', '),
           background_image: game.background_image,
         }));
+
+// -------------------------------------------------------
 
         const newGames = gamesDetails.filter((newGame: Game) => !games.some((prevGame: Game) => prevGame.id === newGame.id));
         setGames((prevGames) => [...prevGames, ...newGames]);
@@ -207,10 +209,23 @@ const throttle = (func: (...args: any[]) => void, delay: number) => {
     };
   }, [throttledHandleScroll]);
 
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    };
+
+    scrollToTop();
+  }, [selectedPlatform]);
+
+    // -------------------------------------------------------
+
   const filteredGames = selectedPlatform
     ? games.filter((game) => game.platform.split(', ').includes(selectedPlatform))
     : games;
-
 
     // -------------------------------------------------------
 
