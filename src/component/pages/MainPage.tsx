@@ -122,7 +122,7 @@ const GameList = () => {
           name: game.name,
           platform: game.platforms.map((platform) => platform.platform.name).join(', '),
           genre: game.genres.map((genre) => genre.name).join(', '),
-          image: game.background_image,
+          background_image: game.background_image,
         }));
 
         const informationGames = gamesDetails.filter((newGame: Game) => {
@@ -189,14 +189,14 @@ const GameList = () => {
         </Tab>
       </Sidebar>
       <Content>
-      {filteredGames.map((game) => (
-        <GameItem key={game.id}>
-          <strong>{game.name}</strong>
-          <span>{game.platform}</span>
-          <span>{game.genre}</span>
-          <GameImage src={game.background_image} alt={game.name} />
-        </GameItem>
-      ))}
+        {filteredGames.map((game) => (
+          <GameItem key={game.id}>
+            <strong>{game.name}</strong>
+            <span>{game.platform}</span>
+            <span>{game.genre}</span>
+            <GameImage src={game.background_image} alt={game.name} />
+          </GameItem>
+        ))}
       </Content>
     </Container>
   );
