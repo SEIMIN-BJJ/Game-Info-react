@@ -137,8 +137,6 @@ const GameImage = styled.img`
 
 `;
 
-
-
 const GameList = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
@@ -190,13 +188,12 @@ const GameList = () => {
 const throttle = (func: (...args: any[]) => void, delay: number) => {
   let timeout: NodeJS.Timeout | undefined;
   return function (...args: any[]) {
-    if (timeout !== undefined) {
-      clearTimeout(timeout);
+    if (!timeout) {
+      timeout = setTimeout(() => {
+        func(...args);
+        timeout = undefined;
+      }, delay);
     }
-    timeout = setTimeout(() => {
-      func(...args);
-      timeout = undefined;
-    }, delay);
   };
 };
 
