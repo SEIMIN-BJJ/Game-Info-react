@@ -7,7 +7,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
 
   @media (max-width: 768px) {
     width: auto;

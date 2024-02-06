@@ -36,6 +36,10 @@ const Container = styled.div`
   width: 100%;
   height: auto;
   margin-top: 2.5rem;
+
+  @media screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 const Sidebar = styled.div`
@@ -43,12 +47,18 @@ const Sidebar = styled.div`
   flex-direction: column;
   position: fixed;
   width: 12rem;
-  height: 100%;
+  height: auto;
   overflow-y: auto;
   justify-content: flex-start;
   align-items: center;
   margin-top: 6.1rem;
   background-color: #fff;
+
+  @media screen and (max-width: 768px) {
+  margin-top: 2rem;
+  width: 8rem;
+
+  }
 `;
 
 const tabStyles = `
@@ -82,6 +92,30 @@ const Content = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+
+  .GameTitle {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -2rem;
+
+    @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 2rem;
+    padding-left: 9rem;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 
@@ -101,6 +135,12 @@ const GameItem = styled.li`
   margin-top: 5rem;
   margin-bottom: -5rem;
 
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 7.5rem;
+  }
 
   &:hover {
     background-color: #E60013;
@@ -126,6 +166,8 @@ const GameItem = styled.li`
     text-align: center;
     font-weight: 600;
   }
+
+
 `;
 
 const GameImage = styled.img`
@@ -142,6 +184,7 @@ const GameList = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
   const [page, setPage] = useState<number>(1);
   const [selectedPlatformTitle, setSelectedPlatformTitle] = useState<string>('All');
+  const [loading, setLoading] = useState(false);
   const PLATFORMS = ['PC', 'PlayStation 5', 'Xbox Series S/X', 'Nintendo Switch'];
 
   useEffect(() => {
@@ -175,14 +218,18 @@ const GameList = () => {
 
 // -------------------------------------------------------
 
-  const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop ===
-      document.documentElement.offsetHeight
-    ) {
+const handleScroll = () => {
+  if (
+    window.innerHeight + document.documentElement.scrollTop ===
+    document.documentElement.offsetHeight
+  ) {
+    if (!loading) {
+      setLoading(true); // 로딩 상태 변경
       setPage((prevPage) => prevPage + 1);
     }
-  };
+  }
+};
+
 
 // -------------------------------------------------------
 
@@ -257,7 +304,7 @@ const throttle = (func: (...args: any[]) => void, delay: number) => {
         ))}
         </Sidebar>
         <Content>
-        <h2 style={{ display: 'flex', justifyContent:'center', alignItems:'center',  position:'absolute', marginTop:'-2rem' }}>{selectedPlatformTitle} </h2>
+        <h2 className='GameTitle'>{selectedPlatformTitle} </h2>
           {filteredGames.map((game) => (
             <GameItem key={game.id}>
               <h1 className='Game-Title'>{game.name}</h1>
