@@ -48,7 +48,7 @@ const Sidebar = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 6.1rem;
-  background-color: #fff;
+  background-color: #fef;
 `;
 
 const tabStyles = `
