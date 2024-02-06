@@ -48,7 +48,7 @@ const Sidebar = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 6.1rem;
-  background-color: #fef;
+  background-color: #fff;
 `;
 
 const tabStyles = `
@@ -145,13 +145,13 @@ const GameList = () => {
   const PLATFORMS = ['PC', 'PlayStation 5', 'Xbox Series S/X', 'Nintendo Switch'];
 
   useEffect(() => {
-    const fetchGames = async () => {
+    const getTwitchGames = async () => {
       try {
-        const response = await axios.get('https://api.rawg.io/api/games', {
-          params: {
-            key: process.env.REACT_APP_RAWG_API_KEY,
-            page: page,
-          },
+        const response = await axios.get('https://api.twitch.tv/helix/games/top', {
+          headers: {
+            'Client-ID': 'tsk4s1mpvohpe6tofr2jqvzyomoja9', // Twitch 개발자 포털에서 발급받은 클라이언트 ID
+            'Authorization': 'e65z5sawx018xn9c6kg79zg82e1971' // Twitch OAuth를 통해 받은 액세스 토큰
+          }
         });
 
         const gamesDetails = response.data.results.map((game: RawgGame) => ({
@@ -162,6 +162,14 @@ const GameList = () => {
           background_image: game.background_image,
         }));
 
+        getTwitchGames()
+  .then(games => {
+    console.log('Twitch games:', games);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 // -------------------------------------------------------
 
         const newGames = gamesDetails.filter((newGame: Game) => !games.some((prevGame: Game) => prevGame.id === newGame.id));
@@ -170,7 +178,7 @@ const GameList = () => {
         console.error('Error fetching games:', error);
       }
     };
-    fetchGames();
+    getTwitchGames();
   }, [page, games, setGames]);
 
 // -------------------------------------------------------
