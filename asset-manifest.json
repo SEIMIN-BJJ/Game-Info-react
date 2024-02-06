@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Game_Info_react/static/css/main.bf02cce0.css",
-    "main.js": "/Game_Info_react/static/js/main.1d2762d2.js",
+    "main.js": "/Game_Info_react/static/js/main.b69e9b76.js",
     "static/js/592.5218ff5a.chunk.js": "/Game_Info_react/static/js/592.5218ff5a.chunk.js",
     "static/media/ChosunCentennial_otf.otf": "/Game_Info_react/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
     "static/media/Pretendard-Light.otf": "/Game_Info_react/static/media/Pretendard-Light.65372b5df865e8aa758a.otf",
@@ -18,11 +18,11 @@
     "static/media/SB 어그로OTF L.otf": "/Game_Info_react/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
     "index.html": "/Game_Info_react/index.html",
     "main.bf02cce0.css.map": "/Game_Info_react/static/css/main.bf02cce0.css.map",
-    "main.1d2762d2.js.map": "/Game_Info_react/static/js/main.1d2762d2.js.map",
+    "main.b69e9b76.js.map": "/Game_Info_react/static/js/main.b69e9b76.js.map",
     "592.5218ff5a.chunk.js.map": "/Game_Info_react/static/js/592.5218ff5a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf02cce0.css",
-    "static/js/main.1d2762d2.js"
+    "static/js/main.b69e9b76.js"
   ]
 }
