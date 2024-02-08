@@ -104,11 +104,12 @@ const Content = styled.div`
     @media screen and (max-width: 768px) {
     width: 100%;
     height: 5vh;
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 0;
-    margin-top: 2rem;
-    padding-left: 9rem;
+    top: 5;
+    margin-top: 0;
+    margin-left: 4rem;
+    margin-bottom: -10rem;
   }
   }
 
@@ -138,8 +139,13 @@ const GameItem = styled.li`
   @media screen and (max-width: 768px) {
     width: 80%;
     height: auto;
-    margin-top: 3rem;
     margin-left: 7.5rem;
+    margin-top: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   &:hover {
