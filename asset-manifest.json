@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Game_Info_react/static/css/main.b7f3d87d.css",
+    "main.css": "/Game_Info_react/static/css/main.831973d7.css",
     "main.js": "/Game_Info_react/static/js/main.9bd3db25.js",
     "static/js/592.5218ff5a.chunk.js": "/Game_Info_react/static/js/592.5218ff5a.chunk.js",
     "static/media/ChosunCentennial_otf.otf": "/Game_Info_react/static/media/ChosunCentennial_otf.54881a3acbbea1be6bb4.otf",
@@ -17,12 +17,12 @@
     "static/media/SB 어그로OTF M.otf": "/Game_Info_react/static/media/SB 어그로OTF M.780ac39bb4c413cd8e16.otf",
     "static/media/SB 어그로OTF L.otf": "/Game_Info_react/static/media/SB 어그로OTF L.4cfda66d0d1066d77b77.otf",
     "index.html": "/Game_Info_react/index.html",
-    "main.b7f3d87d.css.map": "/Game_Info_react/static/css/main.b7f3d87d.css.map",
+    "main.831973d7.css.map": "/Game_Info_react/static/css/main.831973d7.css.map",
     "main.9bd3db25.js.map": "/Game_Info_react/static/js/main.9bd3db25.js.map",
     "592.5218ff5a.chunk.js.map": "/Game_Info_react/static/js/592.5218ff5a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7f3d87d.css",
+    "static/css/main.831973d7.css",
     "static/js/main.9bd3db25.js"
   ]
 }
